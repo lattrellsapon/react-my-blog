@@ -17,7 +17,6 @@ function App() {
           <Navbar />
           <Switch>
             <div className='container'>
-              <Search />
               <Route exact path='/' component={Blogs} />
               <Route exact path='/blog/blog-item/:id' component={Blog} />
             </div>

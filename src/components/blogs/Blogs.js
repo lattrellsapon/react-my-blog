@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { BlogItem } from './BlogItem';
+import { Search } from '../layout/Search';
 
 import { GlobalContext } from '../../context/GlobalState';
 
@@ -8,6 +9,7 @@ export const Blogs = () => {
 
   return (
     <div>
+      <Search />
       <div className='blog-blurb'>
         {blogs.length === 0 ? (
           <h3>
