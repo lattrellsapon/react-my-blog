@@ -6,6 +6,9 @@ import Navbar from './components/layout/Navbar';
 import { Search } from './components/layout/Search';
 import { Blogs } from './components/blogs/Blogs';
 import { Blog } from './components/pages/Blog';
+import { About } from './components/pages/About';
+import { Admin } from './components/pages/Admin';
+import { AddNewBlog } from './components/pages/AddNewBlog';
 
 import { GlobalProvider } from './context/GlobalState';
 
@@ -19,6 +22,13 @@ function App() {
             <div className='container'>
               <Route exact path='/' component={Blogs} />
               <Route exact path='/blog/blog-item/:id' component={Blog} />
+              <Route exact path='/about' component={About} />
+              <Route exact path='/admin' component={Admin} />
+              <Route
+                exact
+                path='/admin/add-a-new-blog'
+                component={AddNewBlog}
+              />
             </div>
           </Switch>
         </div>

@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContexts } from 'react';
 import { Link } from 'react-router-dom';
+
+import { GlobalContext } from '../../context/GlobalState';
+import { useContext } from 'react';
 
 export const BlogItem = ({ blogItem }) => {
   const blogPreview = blogItem.blogBody.substr(0, 100);
+  const { isAdminModeOn, deleteBlog } = useContext(GlobalContext);
+
+  const deleteThisBlog = () => {
+    deleteBlog(blogItem.id);
+  };
 
   return (
     <div className='blog-item-container'>
@@ -21,6 +29,15 @@ export const BlogItem = ({ blogItem }) => {
             Read More
           </Link>
         </p>
+        <div>
+          {isAdminModeOn ? (
+            <button className='delete-blog-button' onClick={deleteThisBlog}>
+              Delete Blog
+            </button>
+          ) : (
+            ''
+          )}
+        </div>
       </div>
     </div>
   );

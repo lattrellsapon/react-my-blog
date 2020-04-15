@@ -9,14 +9,12 @@ export const Blog = () => {
   const { id } = useParams();
 
   const currentBlog = blogs.filter((blog) => {
-    return blog.id === parseInt(id);
+    return blog.id === id;
   });
-
-  console.log(currentBlog);
 
   return (
     <div className='current-blog'>
-      <div>
+      <div className='back-button-container'>
         <Link to='/' className='back-button'>
           BACK
         </Link>
