@@ -28,7 +28,7 @@ export const AdminForm = () => {
   };
 
   return (
-    <div>
+    <div className='admin-form-container'>
       <div className='form-container text-centre'>
         <form onSubmit={onSubmit}>
           <div className='username-container'>

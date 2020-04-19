@@ -42,6 +42,10 @@ li {
   padding: 0 10px;
 }
 
+.highlight-green {
+  color: #28a745;
+}
+
 .text-centre {
   text-align: center;
 }
@@ -174,6 +178,12 @@ nav {
 }
 
 /* About */
+.about-container,
+.admin-form-container,
+.blog-container {
+  min-height: 800px;
+}
+
 .about-body {
   margin: 20px auto;
 }
@@ -285,6 +295,11 @@ nav {
   text-align: center;
 }
 
+/* Footer */
+footer {
+  padding: 20px;
+}
+
 /* Media Queries */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -301,10 +316,16 @@ nav {
   .preview-container {
     padding: 5px 20px;
   }
+  .add-new-blog-button {
+    width: 10%;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .add-new-blog-button {
+    max-width: 5%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

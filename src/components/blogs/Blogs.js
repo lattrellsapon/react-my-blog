@@ -9,7 +9,7 @@ export const Blogs = () => {
   const { blogs, isAdminModeOn } = useContext(GlobalContext);
 
   return (
-    <div>
+    <div className='blog-container'>
       <Search />
       <div className='blog-blurb'>
         {blogs.length === 0 ? <h3>No results found.</h3> : <h3>POSTS</h3>}

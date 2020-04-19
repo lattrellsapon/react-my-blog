@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Navbar from './components/layout/Navbar';
-import { Search } from './components/layout/Search';
+import { Footer } from './components/layout/Footer';
 import { Blogs } from './components/blogs/Blogs';
 import { Blog } from './components/pages/Blog';
 import { About } from './components/pages/About';
@@ -31,6 +31,7 @@ function App() {
               />
             </div>
           </Switch>
+          <Footer />
         </div>
       </Router>
     </GlobalProvider>

@@ -1,8 +1,7 @@
-import React, { useContexts } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import { GlobalContext } from '../../context/GlobalState';
-import { useContext } from 'react';
 
 export const BlogItem = ({ blogItem }) => {
   const blogPreview = blogItem.blogBody.substr(0, 100);
